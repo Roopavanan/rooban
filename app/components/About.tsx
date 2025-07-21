@@ -54,7 +54,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-[3xl] leading-[30px]"
       >
-        I'm a Lead Front-End Developer with expertise in building modern,
+        I&apos;m a Lead Front-End Developer with expertise in building modern,
         responsive web applications using Next.js, React, Tailwind CSS, and
         Framer Motion. With a strong foundation in UI/UX and digital marketing,
         I help bridge the gap between design and business goals. My experience
