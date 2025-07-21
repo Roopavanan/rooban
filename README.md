@@ -79,12 +79,6 @@ Specializations:
 ## 🗒️ Authors
 - Rooban
 
-<p align="left">
-  <a href="https://skillicons.dev">
-    <a href="[https://github.com/omunite215](https://github.com/Roopavanan)">
-      <img src="https://skillicons.dev/icons?i=github" />
-    </a>
-  </a>
-</p>
+
 
 
