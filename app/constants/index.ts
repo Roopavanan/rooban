@@ -153,7 +153,7 @@ const testimonials = [
 			"Twitter(X) primarily used for sharing real-time thoughts, news, and updates through short posts, fostering conversation and discovery across a wide range of topics.",
 		name: "Rooban",
 		image: "/socialmedia/twitter.svg",
-		link: "https://dribbble.com/om2121",
+		link: "https://x.com/skvjy1?s=21",
 	},
 	{
 		id: 4,
@@ -202,7 +202,7 @@ const projects :{
 		],
 		image: "/projectimg/aurogurukul.png",
 		platform: "Web",
-		deploy_link: "https://avmauto.in/",
+		deploy_link: "https://aurogurukul.com/",
 	},
 	{
 		name: "Buglerock Singapore",
@@ -221,7 +221,7 @@ const projects :{
 		],
 		image: "/projectimg/buglerock.png",
 		platform: "Wordpress",
-		deploy_link: "https://sparkbright.in/",
+		deploy_link: "https://buglerock.sg/",
 	},
 	{
 		name: "Yuvabe Education",
@@ -242,9 +242,9 @@ const projects :{
 			},
 		],
 		image: "/projectimg/ybeducation.png",
-		source_code_link: "https://github.com/omunite215/hoobank",
+		source_code_link: "https://github.com/Roopavanan/Yuvabe-Educations.git",
 		platform: "Vercel",
-		deploy_link: "https://hoobankbyom.netlify.app/",
+		deploy_link: "https://yuvabeeducation.com/",
 	},
 	{
 		name: "Yuvabe Studios",
@@ -266,7 +266,7 @@ const projects :{
 			
 		],
 		image: "/projectimg/ybstudios.png",
-		source_code_link: "https://github.com/omunite215/Project_MERN-Dashboard",
+		source_code_link: "https://github.com/Roopavanan/yuvabe-landingpage.git",
 		platform: "Web",
 		deploy_link: "https://yuvabestudios.com/",
 	},
@@ -289,7 +289,7 @@ const projects :{
 			},
 		],
 		image: "/projectimg/cat.png",
-		source_code_link: "https://github.com/Roopavanan/form.git",
+		source_code_link: "https://github.com/Roopavanan/surveyMap.git",
 		platform: "Vercel",
 		deploy_link: "https://survey-map.vercel.app/",
 	},
@@ -310,7 +310,7 @@ const projects :{
 		],
 		image: "/projectimg/etherians.png",
 		platform: "Wordpress",
-		deploy_link: "https://project-issue-tracker.vercel.app/",
+		deploy_link: "https://etherians.community/",
 	},
 ];
 
