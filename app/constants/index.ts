@@ -137,7 +137,7 @@ const testimonials = [
 			"Instagram primarily focused on sharing and discovering visual content, allowing users to showcase creativity through photos, videos, and stories.",
 		name: "Rooban",
 		image: "/socialmedia/instagram.svg",
-		link: "https://www.behance.net/omthecreator",
+		link: "https://www.instagram.com/_.r.o.o.b.a.n._?igsh=M2VnbGt6a292ZWFn&utm_source=qr",
 	},
 	{
 		id: 2,

@@ -1,63 +1,81 @@
 "use client";
 import { slideIn } from "@/app/utils/motion";
-import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import { SectionWrapper } from "./HigherOrderComponents";
 import { EarthCanvas } from "./canvas";
 
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 const Contact = () => {
-	const formRef = useRef<HTMLFormElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
-	const [form, setForm] = useState({
-		name: "",
-		email: "",
-		message: "",
-	});
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-	const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-	const handleChange = (
-		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-	) => {
-		const { name, value } = e.target;
-		setForm({ ...form, [name]: value });
-	};
+  const [loading, setLoading] = useState(false);
 
-	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-		e.preventDefault();
-		setLoading(true);
-		emailjs
-			.send(
-				"service_91ssn8g",
-				"template_jjegxdr",
-				{
-					from_name: form.name,
-					to_name: "Rooban",
-					from_email: form.email,
-					to_email: "roopavanan1009@gmail.com",
-					message: form.message,
-				},
-				"VeFeVdEHL9F9_i6xp",
-			)
-			.then(() => {
-				setLoading(false);
-				alert(
-					"A humble thanks for reaching me out. I will respond to you as soon as possible.",
-				);
-				setForm({
-					name: "",
-					email: "",
-					message: "",
-				});
-			})
-			.catch((error) => {
-				setLoading(false);
-				alert("Sorry!! Something went wrong!!");
-			});
-	};
+  // Validate function
+  const validate = () => {
+    const newErrors = { name: "", email: "", message: "" };
 
-	return (
+    if (!form.name.trim()) newErrors.name = "Name is required.";
+    if (!form.email.trim()) newErrors.email = "Email is required.";
+    else if (!EMAIL_REGEX.test(form.email))
+      newErrors.email = "Invalid email address.";
+    if (!form.message.trim()) newErrors.message = "Message is required.";
+
+    setErrors(newErrors);
+    return !newErrors.name && !newErrors.email && !newErrors.message;
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+    setErrors((prev) => ({ ...prev, [name]: "" }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!validate()) return;
+
+    setLoading(true);
+
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (response.ok) {
+        alert("Message sent! I'll get back to you soon.");
+        setForm({ name: "", email: "", message: "" });
+        setErrors({ name: "", email: "", message: "" });
+      } else {
+        const data = await response.json();
+        alert("Error: " + (data.error || "Something went wrong!"));
+      }
+    } catch (error) {
+      alert("Network error. Try again later.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
@@ -77,9 +95,12 @@ const Contact = () => {
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="Whats's your name?"
+              placeholder="What's your name?"
               className="bg-black/40 py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            {errors.name && (
+              <span className="text-red-400 text-sm mt-1">{errors.name}</span>
+            )}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Email.</span>
@@ -88,9 +109,12 @@ const Contact = () => {
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="Whats's your email?"
+              placeholder="What's your email?"
               className="bg-black/40 py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            {errors.email && (
+              <span className="text-red-400 text-sm mt-1">{errors.email}</span>
+            )}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message.</span>
@@ -102,12 +126,18 @@ const Contact = () => {
               placeholder="What do you want to say?"
               className="bg-black/40 py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
+            {errors.message && (
+              <span className="text-red-400 text-sm mt-1">
+                {errors.message}
+              </span>
+            )}
           </label>
           <button
             type="submit"
             className="bg-black/40 py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+            disabled={loading}
           >
-            {loading ? "Sending..." : "Sent"}
+            {loading ? "Sending..." : "Send"}
           </button>
         </form>
       </motion.div>
