@@ -4,7 +4,7 @@ import React from "react";
 
 const ResumeButton = () => {
 	return (
-    <Link href="/resume/Rooban_bio.pdf" target="_blank" download>
+    <Link href="/resume/rooban_bio.pdf" target="_blank" download>
       <button
         type="button"
         className=" font-medium text-center px-3 py-3 flex gap-1 justify-center rounded-md transition ease-in-out delay-150 bg-[#6B7280]  hover:scale-110 hover:bg-black duration-300"
