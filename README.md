@@ -65,17 +65,19 @@ The website should now be up and running on http://localhost:3000.
 ## 🚀 About Me
 Specializations:
 - UI/UX Design.
-- Web Development
+- Front end developer.
+- Digital Marketing.
+- Business Development.
 
 ## 🙋‍♂️ Connect With Me
 
-[<img src="https://skillicons.dev/icons?i=github" />](https://github.com/omunite215)&nbsp;
-[<img src="https://skillicons.dev/icons?i=linkedin" />](https://www.linkedin.com/in/om-patel-401068143/)&nbsp;
-[<img src="https://skillicons.dev/icons?i=instagram" />](https://www.instagram.com/_21omp/)&nbsp;
-[<img src="https://skillicons.dev/icons?i=devto" />](https://portfoliobyom.netlify.app/)
+[<img src="https://skillicons.dev/icons?i=github" />](https://github.com/Roopavanan)&nbsp;
+[<img src="https://skillicons.dev/icons?i=linkedin" />](www.linkedin.com/in/roopavanan-r-01094121a)&nbsp;
+[<img src="https://skillicons.dev/icons?i=instagram" />](https://www.instagram.com/_.r.o.o.b.a.n._?igsh=M2VnbGt6a292ZWFn&utm_source=qr)&nbsp;
+[<img src="https://skillicons.dev/icons?i=devto" />](https://vercel.com/roopavanans-projects)
 
 ## 🗒️ Authors
-- Om Patel
+- Rooban
 
 <p align="left">
   <a href="https://skillicons.dev">
@@ -85,6 +87,4 @@ Specializations:
   </a>
 </p>
 
-<p align="center">
-  <img src="https://github.com/omunite215/Project_3DPortfolio/assets/78680563/2fcf609b-e802-4fec-8c82-8f55fd043437" alt="Om's Logo Image"/>
-</p>
+
