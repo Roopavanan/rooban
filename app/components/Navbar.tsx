@@ -44,8 +44,8 @@ const Navbar = () => {
 					<Link href="https://github.com/omunite215">
 						<Image
 							src="/logo.png"
-							width={80}
-							height={80}
+							width={100}
+							height={100}
 							alt="logo"
 							priority
 							className="object-contain"

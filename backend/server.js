@@ -32,12 +32,22 @@ app.post("/api/contact", async (req, res) => {
   });
 
   // Mail options
-  let mailOptions = {
-    from: email,
-    to: "roopavanan1009@gmail.com", 
-    subject: `New message from ${name}`,
-    text: message,
-  };
+let mailOptions = {
+  from: "roopavanan1009@gmail.com", 
+  to: "roopavanan1009@gmail.com", 
+  subject: `New message from ${name}`,
+  text: `
+    You have a new contact form submission:
+
+    Name: ${name}
+    Email: ${email}
+
+    Message:
+    ${message}
+  `,
+  replyTo: email, // So you can reply directly to the sender!
+};
+
 
   try {
     await transporter.sendMail(mailOptions);
