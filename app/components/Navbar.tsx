@@ -41,19 +41,17 @@ const Navbar = () => {
 						window.scrollTo(0, 0);
 					}}
 				>
-					<Link href="https://github.com/omunite215">
+					<Link href="https://www.linkedin.com/in/roopavanan-r-01094121a/">
 						<Image
-							src="/logo.png"
-							width={100}
-							height={100}
+							src="/logo.svg"
+							width={90}
+							height={90}
 							alt="logo"
 							priority
 							className="object-contain"
 						/>
 					</Link>
-					<p className="text-white text-[18px] font-bold cursor-pointer flex">
-					 Rooban
-					</p>
+					
 				</div>
 
 				<ul className="list-none hidden sm:flex flex-row gap-10">
