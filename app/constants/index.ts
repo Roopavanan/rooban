@@ -291,22 +291,22 @@ const projects: {
     deploy_link: "https://survey-map.vercel.app/",
   },
   {
-    name: "Etherians",
+    name: "Advance UI/UX Course",
     description:
-      "worked on a WordPress-based website, ensuring clean UI/UX and responsiveness across devices.",
+      "A Next.js-based landing page for an Advanced UI/UX Design course, designed to present course details with smooth scroll interactions",
     tags: [
       {
-        name: "Wordpress",
+        name: "NextJS",
         color: "blue-text-gradient",
       },
       {
-        name: "Image",
+        name: "UseEffect",
         color: "green-text-gradient",
       },
     ],
-    image: "/projectimg/etherians.png",
-    platform: "Wordpress",
-    deploy_link: "https://etherians.community/",
+    image: "/projectimg/uiux.png",
+    platform: "Web",
+    deploy_link: "https://www.yuvabeeducation.com/bridge/advanced-design-workshop",
   },
 ];
 

@@ -5,6 +5,16 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+const rateLimit = require("express-rate-limit");
+
+app.use(
+  "/api/contact",
+  rateLimit({
+    windowMs: 60 * 1000,
+    max: 5,
+  }),
+);
+
 // Middleware
 app.use(cors());
 app.use(express.json());
@@ -23,8 +33,8 @@ app.post("/api/contact", async (req, res) => {
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "roopavanan1009@gmail.com",
-      pass: "mftn smfe kotk pylc",
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
     },
     tls: {
       rejectUnauthorized: false,
@@ -32,11 +42,11 @@ app.post("/api/contact", async (req, res) => {
   });
 
   // Mail options
-let mailOptions = {
-  from: "roopavanan1009@gmail.com", 
-  to: "roopavanan1009@gmail.com", 
-  subject: `New message from ${name}`,
-  text: `
+  let mailOptions = {
+    from: `${email}`,
+    to: "roopavanan1009@gmail.com",
+    subject: `New message from ${name}`,
+    text: `
     You have a new contact form submission:
 
     Name: ${name}
@@ -45,9 +55,8 @@ let mailOptions = {
     Message:
     ${message}
   `,
-  replyTo: email, // So you can reply directly to the sender!
-};
-
+    replyTo: email, // So you can reply directly to the sender!
+  };
 
   try {
     await transporter.sendMail(mailOptions);
