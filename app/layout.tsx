@@ -30,14 +30,14 @@ export const metadata: Metadata = {
   robots: "index, follow",
   openGraph: {
     title:
-      "Rooban | Website Development, Digital Marketing & Meta Ads Freelancer",
+      "Rooban | Freelance Website Developer & Digital Marketer   | Pondicherry",
     description:
       "Grow your business with modern website development, social media marketing, and Meta Ads strategy. Affordable freelance services for brands and startups in Pondicherry.",
     url: "https://rooban.info/",
     siteName: "Rooban Portfolio",
     images: [
       {
-        url: "https://rooban.info/email.png",
+        url: "https://rooban.info/logo.png",
         width: 1200,
         height: 630,
         alt: "Freelance Website Developer & Digital Marketing Expert - Rooban",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
       "Freelance Digital Marketing & Website Developer | Pondicherry",
     description:
       "Affordable websites, social media marketing, and Meta Ads campaigns designed to help businesses scale and grow online.",
-    images: ["https://rooban.info/email.png"],
+    images: ["https://rooban.info/logo.png"],
     creator: "@yourTwitterHandle",
   },
 };
