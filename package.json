@@ -20,7 +20,7 @@
     "express-rate-limit": "^8.2.1",
     "framer-motion": "^11.18.2",
     "maath": "^0.10.7",
-    "next": "^16.1.6",
+    "next": "14.2.3",
     "nodemailer": "^7.0.5",
     "react": "^18",
     "react-dom": "^18",
