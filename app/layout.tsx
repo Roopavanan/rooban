@@ -8,39 +8,39 @@ const fontSans = FontSans({
 	variable: "--font-sans",
 });
 export const metadata: Metadata = {
-  title: "Rooban | Software Developer Portfolio",
+  title: "Rooban | Freelance Website Developer & Digital Marketing Expert in Pondicherry",
   description:
-    "Explore Rooban's professional portfolio featuring React, Next.js, Typescript, Redux and Tailwind CSS projects. Available for Freelance & full-time frontend developer opportunities.",
+    "Best budget-friendly website development, digital marketing, social media marketing, and Meta Ads services in Pondicherry. Helping startups and businesses grow online with high-converting websites and performance marketing strategies.",
   keywords: [
-    "Rooban",
-	"Freelancer Pondicherry",
-	"Website development Pondicherry",
-    "Frontend Developer",
-    "React Developer",
-    "Next.js Portfolio",
-    "Tailwind CSS",
-    "Web Developer Pondicherry",
-    "JavaScript Developer",
-    "UI Developer",
-    "Web Development Portfolio",
+    "Best website developer Pondicherry",
+    "Digital marketing freelancer Pondicherry",
+    "Social media marketing Pondicherry",
+    "Meta Ads expert Pondicherry",
+    "Budget friendly website development",
+    "Business growth marketing India",
+    "Freelance web developer Pondicherry",
+    "Performance marketing freelancer",
+    "Frontend Developer Pondicherry",
+    "Affordable digital marketing services",
   ],
   authors: [
-    { name: "Roopavanan R", url: "https://rooban-portfolio.vercel.app/" },
+    { name: "Roopavanan R", url: "https://rooban.info/" },
   ],
   creator: "Roopavanan R",
   robots: "index, follow",
   openGraph: {
-    title: "Rooban | Frontend Developer Portfolio",
+    title:
+      "Rooban | Website Development, Digital Marketing & Meta Ads Freelancer",
     description:
-      "Showcasing Rooban's best work in React, Next.js, and modern web development. Let's build something amazing together.",
-    url: "https://rooban-portfolio.vercel.app/",
+      "Grow your business with modern website development, social media marketing, and Meta Ads strategy. Affordable freelance services for brands and startups in Pondicherry.",
+    url: "https://rooban.info/",
     siteName: "Rooban Portfolio",
     images: [
       {
-        url: "https://rooban-portfolio.vercel.app/logo.png",
+        url: "https://rooban.info/email.png",
         width: 1200,
         height: 630,
-        alt: "Rooban Portfolio Website",
+        alt: "Freelance Website Developer & Digital Marketing Expert - Rooban",
       },
     ],
     locale: "en_IN",
@@ -48,14 +48,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rooban | Frontend Developer Portfolio",
+    title:
+      "Freelance Digital Marketing & Website Developer | Pondicherry",
     description:
-      "Explore my latest web projects built with Typescript, Next.js & Tailwind CSS.",
-    images: ["https://rooban-portfolio.vercel.app/logo.png"],
+      "Affordable websites, social media marketing, and Meta Ads campaigns designed to help businesses scale and grow online.",
+    images: ["https://rooban.info/email.png"],
     creator: "@yourTwitterHandle",
   },
 };
-
 
 export default function RootLayout({
 	children,
