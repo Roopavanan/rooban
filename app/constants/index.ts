@@ -28,7 +28,7 @@ const services = [
   },
   {
     title: "Forex Trading",
-    icon: "/creator.webp",
+    icon: "/forex.png",
   },
 ];
 
@@ -186,6 +186,24 @@ const projects: {
   platform: "Netlify" | "Vercel" | "Figma" | "Wordpress" | "Web";
 }[] = [
   {
+    name: "YuvaNext - Web Application ",
+    description:
+      "YuvaNext connects AV and Pondicherry-based units with motivated young learners ready to contribute, learn, and grow.",
+    tags: [
+      {
+        name: "Nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Restful API",
+        color: "green-text-gradient",
+      },
+    ],
+    image: "/projectimg/yuvanext.png",
+    platform: "Web",
+    deploy_link: "https://www.yuvanext.com/",
+  },
+  {
     name: "Aurogurukul - E-learning Platform",
     description:
       "A responsive e-learning platform designed to deliver structured online courses with an intuitive and user-friendly interface.",
@@ -307,6 +325,28 @@ const projects: {
     image: "/projectimg/uiux.png",
     platform: "Web",
     deploy_link: "https://www.yuvabeeducation.com/bridge/advanced-design-workshop",
+  },
+  {
+    name: "GlambyJoshiba",
+    description:
+      "A refined Next.js portfolio for a freelance makeup artist with 15+ years of experience, showcasing bridal work, testimonials, services, and booking.",
+    tags: [
+      {
+        name: "vite",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "UseEffect",
+        color: "green-text-gradient",
+      },
+        {
+        name: "Freelance",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: "/projectimg/glambyjoshiba.png",
+    platform: "Web",
+    deploy_link: "https://glambyjoshiba.vercel.app/",
   },
 ];
 

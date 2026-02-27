@@ -30,7 +30,7 @@ const ServiceCard = ({ index, title, icon }: ServiceCardProps) => {
               width={64}
               height={64}
               alt={title}
-              className="w-16 h-16 object-contain"
+              className="w-50 h-50 object-contain"
             />
             <h3 className="text-white text-[20px] font-bold text-center">
               {title}
