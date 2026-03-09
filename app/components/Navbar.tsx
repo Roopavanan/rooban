@@ -55,19 +55,18 @@ const Navbar = () => {
 				</div>
 
 				<ul className="list-none hidden sm:flex flex-row gap-10">
-					{navLinks.map((nav) => (
-						// biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
-						<li
-							key={nav.id}
-							className={`${
-								active === nav.title ? "text-white" : "text-secondary"
-							} hover:text-white text-[18px] font-medium cursor-pointer`}
-							onClick={() => setActive(nav.title)}
-						>
-							<Link href={`#${nav.id}`}>{nav.title}</Link>
-						</li>
-					))}
-				</ul>
+  {navLinks.map((nav) => (
+    <li
+      key={nav.title}
+      className={`${
+        active === nav.title ? "text-white" : "text-secondary"
+      } hover:text-white text-[18px] font-medium cursor-pointer`}
+      onClick={() => setActive(nav.title)}
+    >
+      <Link href={nav.path}>{nav.title}</Link>
+    </li>
+  ))}
+</ul>
 				<div className="mt-2 lg:block hidden">
 					<ResumeButton />
 				</div>
@@ -91,7 +90,7 @@ const Navbar = () => {
 							{navLinks.map((nav) => (
 								// biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
 								<li
-									key={nav.id}
+									key={nav.title}
 									className={`font-poppins font-medium cursor-pointer text-[16px] ${
 										active === nav.title ? "text-white" : "text-secondary"
 									}`}
@@ -100,7 +99,7 @@ const Navbar = () => {
 										setActive(nav.title);
 									}}
 								>
-									<Link href={`#${nav.id}`}>{nav.title}</Link>
+									<Link href={nav.path}>{nav.title}</Link>
 								</li>
 							))}
 							<li>

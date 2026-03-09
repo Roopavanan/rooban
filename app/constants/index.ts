@@ -1,18 +1,25 @@
 export const navLinks = [
   {
-    id: "about",
     title: "About",
+    path: "#about",
   },
   {
-    id: "work",
     title: "Work",
+    path: "#work",
+  },
+   {
+    title: "Projects",
+    path: "#project",
   },
   {
-    id: "contact",
     title: "Contact",
+    path: "#contact",
+  },
+  {
+    title: "Blogs",
+    path: "/blog",
   },
 ];
-
 const services = [
   {
     title: "Business Development",
@@ -185,6 +192,24 @@ const projects: {
   deploy_link: string;
   platform: "Netlify" | "Vercel" | "Figma" | "Wordpress" | "Web";
 }[] = [
+  {
+    name: "PropCodeHub ",
+    description:
+      "PropCodeHub showcases discount codes and deals from various prop firms, helping traders save money on their trading challenges and accounts",
+    tags: [
+      {
+        name: "React + Vite",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Supabase",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: "/projectimg/propcodehub.png",
+    platform: "Web",
+    deploy_link: "https://www.propcodehub.com/",
+  },
   {
     name: "YuvaNext - Web Application ",
     description:
