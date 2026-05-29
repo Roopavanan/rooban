@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { Tilt } from "react-tilt";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -33,7 +33,12 @@ const ProjectCard = ({
 	platform
 }: ProjectCardProps) => {
 	return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      variants={fadeIn("up", "spring", (index % 6) * 0.15, 0.75)}
+    >
       <Tilt
         options={{
           max: 45,
@@ -114,6 +119,9 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+  const [showAll, setShowAll] = useState(false);
+  const visibleProjects = showAll ? projects : projects.slice(0, 6);
+
 	return (
     <>
       <motion.div variants={textVariant()}>
@@ -136,10 +144,22 @@ const Works = () => {
       </div>
 
       <div className="mt-20 flex flex-wrap gap-7">
-        {projects.map((project, index) => (
+        {visibleProjects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
+
+      {projects.length > 6 && (
+        <div className="mt-10 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setShowAll((prev) => !prev)}
+            className="px-8 py-3 rounded-full bg-tertiary text-white font-medium text-[16px] hover:bg-[#434b6b] transition-colors duration-200"
+          >
+            {showAll ? "Show Less" : "View All Projects"}
+          </button>
+        </div>
+      )}
     </>
   );
 };

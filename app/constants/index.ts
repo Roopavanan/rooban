@@ -193,6 +193,42 @@ const projects: {
   platform: "Netlify" | "Vercel" | "Figma" | "Wordpress" | "Web";
 }[] = [
   {
+    name: "Aneeras ",
+    description:
+      "Aneeras is a product based startup company that provides a platform for users to access and purchase a wide range of products and services, offering a seamless online shopping experience.",
+    tags: [
+      {
+        name: "Nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Resend",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: "/projectimg/aneeras.png",
+    platform: "Web",
+    deploy_link: "https://www.aneeras.com/",
+  },
+  {
+    name: "Tripknot ",
+    description:
+      "Tripknot is a travel platform that helps users plan and book their trips with ease, offering a wide range of options and personalized recommendations.",
+    tags: [
+      {
+        name: "Nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Resend",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: "/projectimg/tripknot.png",
+    platform: "Web",
+    deploy_link: "https://www.tripknot.in/",
+  },
+  {
     name: "PropCodeHub ",
     description:
       "PropCodeHub showcases discount codes and deals from various prop firms, helping traders save money on their trading challenges and accounts",
@@ -351,28 +387,7 @@ const projects: {
     platform: "Web",
     deploy_link: "https://www.yuvabeeducation.com/bridge/advanced-design-workshop",
   },
-  {
-    name: "GlambyJoshiba",
-    description:
-      "A refined Next.js portfolio for a freelance makeup artist with 15+ years of experience, showcasing bridal work, testimonials, services, and booking.",
-    tags: [
-      {
-        name: "vite",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "UseEffect",
-        color: "green-text-gradient",
-      },
-        {
-        name: "Freelance",
-        color: "orange-text-gradient",
-      },
-    ],
-    image: "/projectimg/glambyjoshiba.png",
-    platform: "Web",
-    deploy_link: "https://glambyjoshiba.vercel.app/",
-  },
+  
 ];
 
 export { services, technologies, experiences, testimonials, projects };
